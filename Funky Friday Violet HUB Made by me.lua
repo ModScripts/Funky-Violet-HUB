@@ -11,7 +11,7 @@ local Notes = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local Mic = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local Anims = Instance.new("TextButton")
+local ContentCreatorMic = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local AutoPlayer = Instance.new("TextButton")
@@ -111,21 +111,18 @@ end)
 UICorner_4.CornerRadius = UDim.new(0, 9)
 UICorner_4.Parent = Mic
 
-UICorner_5.CornerRadius = UDim.new(0, 9)
-UICorner_5.Parent = Anims
-
-Anims.Name = "Anims"
-Anims.Parent = Frame
-Anims.BackgroundColor3 = Color3.fromRGB(139, 0, 139)
-Anims.Position = UDim2.new(0.0232558139, 0, 0.688172042, 0)
-Anims.Size = UDim2.new(0, 245, 0, 58)
-Anims.Font = Enum.Font.GothamBold
-Anims.Text = "Content Creator Mic"
-Anims.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anims.TextScaled = true
-Anims.TextSize = 14.000
-Anims.TextWrapped = true
-Mic.MouseButton1Click:Connect(function()
+ContentCreatorMic.Name = "ContentCreatorMic"
+ContentCreatorMic.Parent = Frame
+ContentCreatorMic.BackgroundColor3 = Color3.fromRGB(139, 0, 139)
+ContentCreatorMic.Position = UDim2.new(0.0232558139, 0, 0.688172042, 0)
+ContentCreatorMic.Size = UDim2.new(0, 230, 0, 60)
+ContentCreatorMic.Font = Enum.Font.GothamBold
+ContentCreatorMic.Text = "Content Creator Mic"
+ContentCreatorMic.TextColor3 = Color3.fromRGB(0, 0, 0)
+ContentCreatorMic.TextScaled = true
+ContentCreatorMic.TextSize = 14.000
+ContentCreatorMic.TextWrapped = true
+ContentCreatorMic.MouseButton1Click:Connect(function()
 	local args = {
 		[1] = {
 			[1] = "Server",
@@ -139,6 +136,8 @@ Mic.MouseButton1Click:Connect(function()
 
 	game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 end)
+UICorner_4.CornerRadius = UDim.new(0, 9)
+UICorner_4.Parent = Mic
 
 AutoPlayer.Name = "AutoPlayer"
 AutoPlayer.Parent = Frame
